@@ -7,11 +7,10 @@ import router from './router'
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
+Vue.http.options.root = '/proxy';
+
 new Vue({
     el: '#app',
     router: router,
-    render: h => h(App),
-    http: {
-        root: '/proxy',
-    }
+    render: h => h(App)
 })
