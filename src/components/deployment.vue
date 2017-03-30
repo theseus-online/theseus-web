@@ -1,7 +1,7 @@
 <template>
     <div class="deployments container">
         <div class="row">
-            <item-box v-for="dep in deployments" :name="dep.name" :description="dep.name">
+            <item-box v-for="dep, idx in deployments" :name="dep.name" :description="dep.name" @remove="removeDeployment(dep)">
                 <div v-for="c in dep.containers" class="panel panel-success">
 					<div class="panel-heading">
 						<h3 class="panel-title">{{c.name}}</h3>
@@ -23,14 +23,23 @@
             }
         },
         mounted () {
-            this.$http.get('users/' + this.$route.params.username + '/deployments').then(response => {
-                this.deployments = response.data;
-            }, response => {
-                // TODO: handle error.
-            });
+            this.loadDeployments();
         },
         methods: {
-
+            loadDeployments() {
+                this.$http.get('users/' + this.$route.params.username + '/deployments').then(response => {
+                    this.deployments = response.data;
+                }, response => {
+                    // TODO: handle error.
+                });
+            },
+            removeDeployment(d) {
+                this.$http.delete('users/' + this.$route.params.username + '/deployments/' + d.name).then(response => {
+                    this.loadDeployments();
+                }, response => {
+                    // TODO: handle error.
+                });
+            }
         },
         components: {
             'item-box': ItemBox,

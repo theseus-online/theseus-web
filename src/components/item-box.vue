@@ -18,7 +18,7 @@
 					<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
 					    <i class="icon-wrench"></i>
 					</a>
-					<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+					<a class="btn btn-circle btn-icon-only btn-default" @click="onRemove()">
 						<i class="icon-trash"></i>
 					</a>
 				</div>
@@ -33,5 +33,10 @@
 <script>
     export default {
         props: ['name', 'description'],
+		methods: {
+			onRemove() {
+				this.$emit("remove");
+			}
+		}
     }
 </script>
