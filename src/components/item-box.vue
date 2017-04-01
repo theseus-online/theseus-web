@@ -9,15 +9,6 @@
 					<span class="caption-helper">{{description}}</span>
 				</div>
 				<div class="actions">
-					<a class="btn btn-circle btn-icon-only btn-default disabled" href="javascript:;">
-					    <i class="icon-cloud-upload"></i>
-					</a>
-					<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-					    <i class="icon-cloud-download"></i>
-					</a>
-					<a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-					    <i class="icon-wrench"></i>
-					</a>
 					<a class="btn btn-circle btn-icon-only btn-default" @click="onRemove()">
 						<i class="icon-trash"></i>
 					</a>

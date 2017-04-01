@@ -1,7 +1,7 @@
 <template>
     <div class="deployments container">
         <div class="row">
-            <item-box v-for="dep, idx in deployments" :name="dep.name" :description="dep.name" @remove="removeDeployment(dep)">
+            <item-box v-for="dep in deployments" :name="dep.name" :description="dep.name" @remove="removeDeployment(dep)">
                 <div v-for="c in dep.containers" class="panel panel-success">
 					<div class="panel-heading">
 						<h3 class="panel-title">{{c.name}}</h3>
