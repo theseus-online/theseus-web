@@ -6,7 +6,7 @@
 					<div class="panel-heading">
 						<h3 class="panel-title">{{p.name}}/{{p.protocol}}</h3>
 					</div>
-					<div class="panel-body">{{p.port}} -> {{p.targetPort}}</div>
+					<div class="panel-body">{{p.name}}.{{$route.params.username}}:{{p.port}} -> {{svc.backend}}:{{p.targetPort}}</div>
 				</div>
             </item-box>
         </div>

@@ -37,7 +37,7 @@
                             <router-link :to="{name: 'new-deployment', params: {username: user.name}}"><i class="icon-calendar"></i> New Deployment </router-link>
 						</li>
 						<li>
-							<a><i class="icon-envelope-open"></i> New Service </a>
+							<router-link :to="{name: 'new-service', params: {username: user.name}}"><i class="icon-envelope-open"></i> New Service </router-link>
 						</li>
 						<li>
 							<a><i class="icon-rocket"></i> New Ingress </a>
