@@ -4,8 +4,9 @@ import User from './components/user.vue'
 import Deployment from './components/deployment.vue'
 import NewDeployment from './components/new-deployment.vue'
 import Service from './components/service.vue'
-import Ingress from './components/ingress.vue'
 import NewService from './components/new-service.vue'
+import Ingress from './components/ingress.vue'
+import NewIngress from './components/new-ingress.vue'
 import Err404 from './components/err404.vue'
 import Err500 from './components/err500.vue'
 
@@ -60,6 +61,11 @@ export default new VueRouter({
                     name: "new-service",
                     path: "new-service",
                     component: NewService
+                },
+                {
+                    name: "new-ingress",
+                    path: "new-ingress",
+                    component: NewIngress
                 }
             ]
         }

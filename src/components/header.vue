@@ -40,7 +40,7 @@
 							<router-link :to="{name: 'new-service', params: {username: user.name}}"><i class="icon-envelope-open"></i> New Service </router-link>
 						</li>
 						<li>
-							<a><i class="icon-rocket"></i> New Ingress </a>
+							<router-link :to="{name: 'new-ingress', params: {username: user.name}}"><i class="icon-rocket"></i> New Ingress </router-link>
 						</li>
 						<li class="divider">
 						</li>
@@ -77,9 +77,9 @@
             return {
                 open_user_dropdown: false,
                 user_dropdown_class: {
-                    'dropdown': true, 
-                    'dropdown-user': true, 
-                    'dropdown-dark': true, 
+                    'dropdown': true,
+                    'dropdown-user': true,
+                    'dropdown-dark': true,
                     'open': false,
                 }
             }
