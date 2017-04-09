@@ -4,7 +4,7 @@ MAINTAINER Joshua Chow <gnu.crazier@gmail.com>
 
 ADD index.html /data/index.html
 ADD favicon.ico /data/favicon.ico
-ADD images /data/images
+ADD assets /data/assets
 ADD dist /data/dist
 ADD conf/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
 
