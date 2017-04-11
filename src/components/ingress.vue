@@ -1,5 +1,5 @@
 <template>
-    <div class="services container">
+    <div class="ingresses container">
         <div class="row">
             <item-box v-for="ing in ingresses" :name="ing.name" :description="ing.name" @remove="removeIngress(ing)">
                 <div class="panel panel-success">
@@ -47,3 +47,9 @@
         }
     }
 </script>
+
+<style>
+.ingresses.container {
+    max-width: 100%;
+}
+</style>

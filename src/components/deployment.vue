@@ -46,3 +46,9 @@
         }
     }
 </script>
+
+<style>
+.deployments.container {
+    max-width: 100%;
+}
+</style>

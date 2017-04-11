@@ -46,3 +46,9 @@
         }
     }
 </script>
+
+<style>
+.services.container {
+    max-width: 100%;
+}
+</style>
